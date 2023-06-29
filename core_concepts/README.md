@@ -14,18 +14,13 @@ This directory contains files that I used to practice my skills with Golang
 - `hello/go.mod`
 - `hello/hello.go`
 
-Each directory contains a `go.mod` file that acts as definition for each module's dependencies and version requirements.
-
 ## Setup and Run
 
 #### Setup
-All that is needed to run the code within this repository is to install Go given the hyperlink at the top of the repo.
+All that is needed to run the code within this directory is to install Go given the hyperlink at the top of the repo.
 
 
 #### Run
 Run the command `go run .` in the `hello` directory to view the output of the code
 
 To run unit tests, run `go test` in the any directory.
-
-## Authors
-**Akhil Kodumuri** - [akod0883](https://github.com/akod0883)
