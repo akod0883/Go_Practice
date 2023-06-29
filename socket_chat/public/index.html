@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chat</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="messageInput" />
+    <button onclick="sendMessage()">Send</button>
+    <div id="messages"></div>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:8080/ws");
+
+        socket.onmessage = function(event) {
+            const message = event.data;
+            $("#messages").append("<p>" + message + "</p>");
+        };
+
+        function sendMessage() {
+            const message = $("#messageInput").val();
+            socket.send(message);
+            $("#messageInput").val("");
+        }
+    </script>
+</body>
+</html>
